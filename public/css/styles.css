@@ -59,6 +59,9 @@ main {
 }
 
 .main1 {
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
     background-color: black;
     color: white;
 }
@@ -123,4 +126,19 @@ main {
 .hidden {
     opacity: 0;
     transition: opacity 0.5s ease-in-out;
+}
+
+.hand {
+    font-size: 10rem; /* Tamaño de la mano */    
+    animation: wave 2s infinite;
+}
+
+/* Definición de la animación de saludo */
+@keyframes wave {
+    0% { transform: rotate(0deg); }
+    20% { transform: rotate(-20deg); }
+    40% { transform: rotate(10deg); }
+    60% { transform: rotate(-10deg); }
+    80% { transform: rotate(20deg); }
+    100% { transform: rotate(0deg); }
 }

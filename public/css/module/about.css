@@ -1,0 +1,92 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;700&display=swap');
+
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto Condensed', sans-serif;
+    overflow-x: hidden;
+    height: 100vh;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 9px 50px;
+    background-color: white;
+}
+
+.header1 h5 {
+    font-size: 2rem;
+    margin: 0;
+}
+
+.nav-menu {
+    list-style-type: none;
+    display: flex;
+    gap: 20px;
+}
+
+.nav-menu a {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    border-radius: 1rem;
+    padding: 10px 15px; /* Añade algo de padding para el efecto de fondo */
+    transition: background-color 0.3s ease; /* Suaviza la transición de color */
+}
+
+.nav-menu a:hover {
+    background-color: #f0f0f0; /* Cambia el color de fondo al pasar el mouse */
+    color: #6f2b2b; /* Opcional: Cambia el color del texto si lo deseas */
+    border-radius: 1rem;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    height: 90vh;
+}
+
+.main1 {
+    width: 100%;
+    height: 40%;
+    background: black;
+    color: white;
+}
+
+.main1 div {
+    text-align: center;
+    font-size: 4rem;
+}
+
+.main2 {
+    display: flex;
+    width: 100%;
+    height: 60%;
+    padding: 2rem;
+    justify-content: center;
+}
+
+.imagen-main2 {
+    display: flex;
+    width: 40%;
+    height: 100%;
+    justify-content: center;
+    border-radius: 0.5rem;
+}
+
+.imagen-main2 img { 
+    height: 100%;
+    object-fit: cover;
+    border-radius: 0.5rem;
+}
+
+.texto-main2 {
+    width: 40%;
+    height: 100%;
+    font-size: 2.5rem;
+}
