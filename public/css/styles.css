@@ -1,0 +1,126 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;700&display=swap');
+
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto Condensed', sans-serif;
+    overflow-x: hidden;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 9px 50px;
+    background-color: white;
+}
+
+.header1 h5 {
+    font-size: 2rem;
+    margin: 0;
+}
+
+.nav-menu {
+    list-style-type: none;
+    display: flex;
+    gap: 20px;
+}
+
+.nav-menu a {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    border-radius: 1rem;
+    padding: 10px 15px; /* Añade algo de padding para el efecto de fondo */
+    transition: background-color 0.3s ease; /* Suaviza la transición de color */
+}
+
+.nav-menu a:hover {
+    background-color: #f0f0f0; /* Cambia el color de fondo al pasar el mouse */
+    color: #6f2b2b; /* Opcional: Cambia el color del texto si lo deseas */
+    border-radius: 1rem;
+}
+
+main {
+    display: flex;
+    height: calc(100vh - 80px);
+}
+
+.main1, .main2 {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.main1 {
+    background-color: black;
+    color: white;
+}
+
+.main1-texto h5 {
+    font-size: 4rem;
+    margin: 0;
+    opacity: 0;
+    transform: scale(0);
+    animation: zoomIn 1s forwards;
+}
+
+.main1-imagen {
+    width: 80%;
+    height: 60%;
+    margin-top: 20px;
+    opacity: 0;
+    transform: scale(0);
+    animation: zoomIn 1s forwards 0.5s;
+}
+
+.main1-imagen img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    border-radius: 1rem;
+}
+
+.main2 {
+    background-color: white;
+    text-align: right;
+    padding-right: 50px;
+}
+
+.main2 p {
+    font-size: 3rem;
+    margin: 0;
+    line-height: 1.2;
+    opacity: 0;
+    transform: scale(0);
+}
+
+.main2 p:first-child {
+    animation: zoomIn 1s forwards 1s;
+}
+
+.main2 p:last-child {
+    animation: zoomIn 1s forwards 1.5s;
+}
+
+@keyframes zoomIn {
+    from {
+        opacity: 0;
+        transform: scale(0);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.hidden {
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
