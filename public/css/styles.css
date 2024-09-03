@@ -46,7 +46,7 @@ header {
 
 main {
     display: flex;
-    height: calc(100vh - 80px);
+    height: calc(100vh - 78px);
 }
 
 .main1, .main2 {
