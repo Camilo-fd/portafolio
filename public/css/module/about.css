@@ -56,6 +56,27 @@ main {
     height: 40%;
     background: black;
     color: white;
+    transition: 1s;
+    
+}
+
+.main1::before {
+    content: "";
+    transform-origin: center;
+    position: absolute;
+    top: 80%;
+    left: 3%;
+    width: 95%;
+    height: 40%;
+    transition: 0.5s;
+}
+
+.main1:hover::before, .main1:hover::after {
+    transform: scale(0);
+}
+
+.main1:hover {
+    box-shadow: inset 0px 0px 50px #1479EA;
 }
 
 .main1 div {
@@ -67,26 +88,225 @@ main {
     display: flex;
     width: 100%;
     height: 60%;
-    padding: 2rem;
+    padding-top: 4rem;
+    gap: 5rem;
     justify-content: center;
-}
-
-.imagen-main2 {
-    display: flex;
-    width: 40%;
-    height: 100%;
-    justify-content: center;
-    border-radius: 0.5rem;
-}
-
-.imagen-main2 img { 
-    height: 100%;
-    object-fit: cover;
-    border-radius: 0.5rem;
+    align-items: flex-end;
 }
 
 .texto-main2 {
-    width: 40%;
+    width: 50%;
     height: 100%;
+    font-size: 2rem;
+}
+
+.card {
+    width: 19%;
+    height: 100%;
+    /* background: rgb(103, 225, 255); */
+    transition: all 0.4s;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px 5px  rgba(0, 0, 0, 0.705);
+    font-size: 30px;
+    font-weight: 900;
+  }
+  
+  .card:hover {
+    border-radius: 15px;
+    cursor: pointer;
+    transform: scale(1.2);
+    box-shadow: 0px 0px 10px 5px  rgba(0, 0, 0, 0.705);
+    /* background: rgb(103, 151, 255); */
+  }
+  
+  .first-content {
+    height: 100%;
+    width: 100%;
+    transition: all 0.4s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 1;
+    border-radius: 15px;
+  }
+
+  .first-content img {
+    height: 100%;
+    border-radius: 0.5rem;
+    object-fit: contain;
+  }
+  
+  .card:hover .first-content {
+    height: 0px;
+    opacity: 0;
+  }
+  
+  .second-content {
+    height: 0%;
+    width: 100%;
+    opacity: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 15px;
+    transition: all 0.4s;
+    font-size: 0px;
+    transform: rotate(90deg) scale(-1);
+  }
+
+  .second-content img {
+    height: 100%;
+    border-radius: 0.5rem;
+    object-fit: contain;
+  }
+  
+  .card:hover .second-content {
+    opacity: 1;
+    height: 100%;
+    font-size: 1.8rem;
+    transform: rotate(0deg);
+  }
+  
+  .main3 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    gap: 3rem;
+}
+
+.texto-main3 {
+    width: 100%;
+    height: 10%;
+    text-align: center;
     font-size: 2.5rem;
 }
+
+.informacion-main3 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Ajusta según la cantidad de columnas */
+    width: 45%;
+    gap: 1rem;
+    padding: 0 5rem;
+}
+
+.caja-main3 {
+    display: flex;
+    width: 80%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+    background-color: #dfdfdf; /* Color de fondo para que se vea la caja */
+    border-radius: 0.5rem;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.caja-main3:hover {
+    transform: scale(1.05); /* Efecto al pasar el mouse */
+    border: 1px solid black;
+}
+
+.imagen-main3 img {
+    width: 100%; /* Ajusta el tamaño de la imagen */
+    height: 100%;
+    object-fit: contain;
+    margin-bottom: 1rem;
+}
+
+.habilidad-main3 h4 {
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+.main4 {
+    display: flex;
+    width: 100%;
+    height: 80vh;
+    padding: 7rem 0rem 4rem;
+    justify-content: center;
+    align-items: center;
+    gap: 5rem;
+}
+
+.caja1-main4 {
+    width: 30%;
+    height: 100%;
+}
+
+.caja2-main4 {
+    width: 30%;
+    height: 100%;
+}
+/* Estilos para la tarjeta flip */
+
+.card-flip {
+    width: 100%;
+    height: 60vh;
+    perspective: 1000px;
+    margin: auto; /* Centra la tarjeta en su contenedor */
+  }
+  
+  .card-inner {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: transform 0.999s;
+  }
+  
+  .card-flip:hover .card-inner {
+    transform: rotateY(180deg);
+  }
+  
+  .card-front,
+  .card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+  }
+  
+  .card-front {
+    background-color: #000000;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    /* border: 10px solid #6A2C70; */
+    border-radius: 10px;
+    justify-content: center;
+    font-size: 24px;
+    transform: rotateY(0deg);
+  }
+
+  .card-front p {
+    font-size: 3rem;
+  }
+  
+  .card-back {
+    background-color: #9f9f9f;
+    color: #000;
+    display: flex;
+    align-items: center;
+    /* border: 10px solid #F08A5D; */
+    border-radius: 10px;
+    justify-content: center;
+    font-size: 24px;
+    transform: rotateY(180deg);
+    padding: 0 2rem;
+  }
+  
+  /* Añadir estas clases a tu CSS */
+  .hidden {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
